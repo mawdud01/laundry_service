@@ -1,0 +1,195 @@
+<!-- res/layout/activity_add_product.xml -->
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp"
+    android:weightSum="8"
+    android:orientation="vertical">
+
+
+<TextView
+    android:layout_weight=".5"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Click Below Option and Select Customer"
+    android:textSize="15dp"
+    android:padding="5dp"
+    ></TextView>
+    <!-- Spinner for selecting a customer -->
+
+    <Spinner
+        android:layout_weight="1"
+        android:background="@color/purple_200"
+        android:id="@+id/customerSpinner"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginTop="16dp"
+        android:layout_gravity="center_horizontal"
+        android:hint="Select Customer" />
+
+    <!-- ScrollView for CheckBoxes -->
+
+    <ScrollView
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:background="@color/Background"
+        >
+
+        <!-- LinearLayout to contain the CheckBoxes -->
+        <LinearLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- CheckBoxes -->
+            <CheckBox
+                android:id="@+id/tShirtsCheckBox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:textSize="15dp"
+                android:text="T-Shirts  -  50 BDT" />
+
+            <CheckBox
+                android:textSize="15dp"
+                android:id="@+id/jeansCheckBox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Jeans  -  60 BDT" />
+
+            <CheckBox
+                android:textSize="15dp"
+                android:id="@+id/dressShirtsCheckBox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Dress Shirts  -  55 BDT" />
+
+            <CheckBox
+                android:textSize="15dp"
+                android:id="@+id/jacketsCheckBox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Jackets  -  70 BDT" />
+
+            <CheckBox
+                android:textSize="15dp"
+                android:id="@+id/sweatersCheckBox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Sweaters  -  45 BDT" />
+
+            <CheckBox
+                android:textSize="15dp"
+                android:id="@+id/bedSheetsCheckBox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Bed Sheets  -  30 BDT" />
+
+            <CheckBox
+                android:textSize="15dp"
+                android:id="@+id/pillowcasesCheckBox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Pillowcases  -  30 BDT" />
+
+            <CheckBox
+                android:textSize="15dp"
+                android:id="@+id/towelsCheckBox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Towels  -  50 BDT" />
+
+            <CheckBox
+                android:textSize="15dp"
+                android:id="@+id/blanketsCheckBox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Blankets  -  100 BDT" />
+
+            <!-- Add more CheckBoxes if needed -->
+
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- EditText for discount input -->
+
+    <LinearLayout
+        android:weightSum="2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:orientation="horizontal">
+
+        <EditText
+            android:layout_weight="1"
+            android:textSize="17dp"
+            android:id="@+id/discount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:hint="Discount 0.0"
+            android:inputType="numberDecimal"
+            android:layout_gravity="center_horizontal" />
+
+        <EditText
+            android:layout_weight="1"
+            android:textSize="17dp"
+            android:id="@+id/paymentstatus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:hint="Advance Payment"
+            android:inputType="numberDecimal"
+            android:layout_gravity="center_horizontal" />
+
+    </LinearLayout>
+
+
+    <!-- Button to calculate total amount -->
+    <Button
+        android:layout_weight="1"
+        android:id="@+id/totalamount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:text="Total Amount"
+        android:textSize="20dp"
+        android:layout_gravity="center_horizontal" />
+
+    <!-- EditText to display the calculated total price -->
+    <EditText
+        android:layout_weight="1"
+        android:textSize="17dp"
+        android:id="@+id/totalPriceEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:hint="0.0"
+        android:inputType="none"
+        android:focusable="false"
+        android:layout_gravity="center_horizontal" />
+
+    <!-- Button to place the order -->
+    <Button
+        android:layout_weight="1"
+        android:id="@+id/placeOrderButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:text="Place Order"
+        android:textSize="20dp"
+        android:layout_gravity="center_horizontal" />
+
+</LinearLayout>

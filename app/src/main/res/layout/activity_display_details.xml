@@ -1,0 +1,115 @@
+<!-- activity_display_details.xml -->
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="20dp"
+    android:weightSum="6"
+    tools:context=".DisplayDetailsActivity">
+
+
+    <TextView
+        android:layout_weight=".5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Click below Option And Select Customer"
+        android:textSize="15dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+
+        ></TextView>
+
+
+    <Spinner
+        android:layout_weight="1"
+        android:background="@color/purple_200"
+        android:id="@+id/customerSpinner"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginTop="16dp"
+        android:layout_gravity="center_horizontal"
+        android:hint="Select Customer" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        android:textSize="20dp"
+        android:textColor="@color/black"
+        android:text="Customer Details:"/>
+
+    <TextView
+        android:layout_weight=".5"
+        android:id="@+id/customerDetailsTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        android:textSize="17dp"
+
+        />
+
+    <TextView
+        android:id="@+id/orderDetailsTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        android:textSize="20dp"
+        android:textColor="@color/black"
+        android:text="Order Details:"/>
+
+    <TextView
+        android:layout_weight=".5"
+        android:id="@+id/orderDetailsText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:textSize="17dp"
+        android:layout_marginTop="8dp"/>
+
+    <TextView
+        android:layout_weight=".5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="18dp"
+        android:hint="Due"
+        android:layout_marginTop="10dp"
+        android:textColor="@color/Red"
+        android:textStyle="bold"
+        android:id="@+id/duepayment"
+        ></TextView>
+
+
+
+    <Button
+        android:layout_weight=".5"
+        android:gravity="center"
+        android:textSize="20dp"
+        android:id="@+id/deleteButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:layout_gravity="center_horizontal"
+        android:text="Delete Order"/>
+
+
+    <Button
+        android:layout_weight=".5"
+        android:gravity="center"
+        android:textSize="20dp"
+        android:id="@+id/deleteCustomerButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:layout_gravity="center_horizontal"
+        android:text="Delete Customer"/>
+
+
+
+
+</LinearLayout>
